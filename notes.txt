@@ -1,0 +1,22 @@
+
+HTTP Request methods:
+    Get: Retrieves information
+    Post: Sends information/Creates new entries
+    Put/Patch: Updates existing information
+    Delete: Deletes information
+
+Route: determines how an application responds to a client request to a particular endpoint (URI/path and HTTP request)
+    Summarized in my own words:  Routes determine how the app responds to requests such as get '/items' or post '/users'.
+
+Route syntax: app.method(path, handler)
+    app: an instance of express
+    method: HTTP request method
+    path: a path on the server
+    handler: function executed when the route is matched
+
+Example: 
+    app.get("/", (req,res) => {
+        res.send("Hello World!");
+    });
+
+req.params: sends an object with the url parameter name and value
